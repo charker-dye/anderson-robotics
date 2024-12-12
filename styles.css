@@ -1,0 +1,241 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600|Raleway|Roboto+Mono');
+
+/* Root Variables */
+:root {
+    --light-accent: #295183; /* Burgundy in Blue */
+    --dark-accent: #1e3c62; /* Squid Ink Soup */
+    --hyperlink: #0366d6; /* Windows 8 Has Crashed :( */
+    --border-colour: rgba(0, 0, 0, 0.12); /* Steel Plate */
+}
+
+/* Global Styles */
+body {
+    background-color: white; /* White background */
+    color: black; /* Black text color */
+    font-family: 'Roboto Mono', monospace; /* Body text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--light-accent); /* Blue background */
+    padding: 20px; /* Space around the content */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center the content */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 20px; /* Space between logo and text */
+    color: white; /* White text */
+}
+
+    header .logo img {
+        max-width: 50px; /* Control the logo size */
+        height: auto;
+    }
+
+    header .header-text h1 {
+        font-family: 'Montserrat', sans-serif; /* Use Montserrat for the header title */
+        font-size: 2.5em;
+        margin: 0;
+    }
+
+    header .header-text p {
+        font-family: 'Roboto Mono', monospace; /* Use Roboto Mono for the subtitle */
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+/* Navigation Menu */
+nav {
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+    .nav-links li {
+        margin-right: 20px;
+        position: relative;
+    }
+
+    .nav-links a {
+        color: white; /* White text for navigation links */
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .nav-links li:hover .dropdown-content {
+        display: block;
+    }
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dark-accent); /* Dark blue dropdown background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: var(--light-accent);
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content */
+.container {
+    padding: 20px;
+    background-color: white; /* White background for the main content */
+}
+
+h1, h2 {
+    color: black; /* Black text for headings */
+    font-family: 'Raleway', sans-serif; /* Raleway for headers */
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif; /* Montserrat for subtitles */
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px var(--border-colour);
+}
+
+    .product-item a {
+        color: var(--hyperlink);
+        text-decoration: none;
+    }
+
+        .product-item a:hover {
+            text-decoration: underline;
+        }
+
+/* Footer */
+footer {
+    background-color: var(--light-accent); /* Blue background for footer */
+    color: white; /* White text in footer */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Styling Links */
+a {
+    color: var(--hyperlink);
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--light-accent); /* Same as --light-accent */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    button:hover {
+        background-color: var(--dark-accent); /* Slightly darker shade for hover */
+        color: white; /* Ensure text stays white */
+    }
+
+/* Error and Success Messages */
+.error, .success {
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+    font-family: 'Roboto Mono', monospace; /* Use Roboto Mono for form fields */
+}
+
+    form input, form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+    }
+
+    form button {
+        padding: 10px 20px;
+        background-color: #295183;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+        form button:hover {
+            background-color: #1a3e6a;
+        }
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Comment Section */
+.comment {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+    .comment img {
+        max-width: 200px;
+        height: auto;
+    }
